@@ -127,7 +127,7 @@ def main():
     seq_gammas = [.05, .05, .05, .05, .05]
     sim_alphas = [.0001, .0001, .0001, .00005, .00005]
     sim_gammas = [.1, .02, .02, .05, .05]
-    for n_iter in range(5, 6):
+    for n_iter in range(1, 6):
         print(f'# Inference Iterations:{n_iter}')
         print('Sequential IL')
         infComp.training_run(epochs=45, data=1, num_seeds=5, model_type=0, n_iter=n_iter,

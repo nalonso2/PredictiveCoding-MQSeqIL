@@ -122,15 +122,15 @@ def training_run(epochs=120, batch_size=64, num_seeds=1, alpha=[1], model_type=0
             elif model_type == 1:
                 models[-1].append(IL_ConvBig.IL(type=1, alpha=alpha[l], arch=arch))
 
-            # IL
+            # SeqIL
             elif model_type == 2:
                 models[-1].append(IL_ConvBig.IL(n_iter=4, gamma=gamma, beta=beta, type=2, alpha=alpha[l], arch=arch))
 
-            # IL-MQ
+            # SeqIL-MQ
             elif model_type == 3:
                 models[-1].append(IL_ConvBig.IL(n_iter=4, gamma=gamma, beta=beta, type=3, alpha=alpha[l], arch=arch))
 
-            # IL-Adam
+            # SeqIL-Adam
             elif model_type == 4:
                 models[-1].append(IL_ConvBig.IL(n_iter=4, gamma=gamma, beta=beta, type=4, alpha=alpha[l], arch=arch))
 

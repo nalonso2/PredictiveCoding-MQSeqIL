@@ -19,10 +19,10 @@ softmax = torch.nn.Softmax(dim=1)
 cos = torch.nn.CosineSimilarity(dim=1, eps=1e-6)
 relu = torch.nn.ReLU()
 
-# Load MNIST Data
+# Load Data
 def get_data(batch_size=100):
-    traindir = 'C:/Users/nalon/Documents/PythonScripts/tiny-imagenet-200/train'
-    testdir = 'C:/Users/nalon/Documents/PythonScripts/tiny-imagenet-200/val'
+    traindir = 'yourDirectory/tiny-imagenet-200/train'
+    testdir = 'yourDirectory/tiny-imagenet-200/val'
 
     transform = torchvision.transforms.Compose([torchvision.transforms.ToTensor(),
                                                 torchvision.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])

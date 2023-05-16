@@ -18,7 +18,7 @@ cos = torch.nn.CosineSimilarity(dim=1, eps=1e-6)
 relu = torch.nn.ReLU()
 
 
-# Load MNIST Data
+# Load Data
 def get_data(batch_size=64, data=0):
     if data == 0:
         d_name = 'SVHN'

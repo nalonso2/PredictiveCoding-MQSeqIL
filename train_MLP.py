@@ -18,7 +18,7 @@ softmax = torch.nn.Softmax(dim=1)
 cos = torch.nn.CosineSimilarity(dim=1, eps=1e-6)
 relu = torch.nn.ReLU()
 
-# Load MNIST Data
+# Load Data
 def get_data(batch_size=64, data=0):
     if data == 0:
         d_name = 'SVHN'
@@ -142,15 +142,15 @@ def training_run(epochs=80, batch_size=64, data=2, num_seeds=1, alpha=[1], beta=
             elif model_type == 1:
                 models[-1].append(BP.BP(model_dim, type=1, alpha=alpha[l], smax=True))
 
-            # IL
+            # SeqIL
             elif model_type == 2:
                 models[-1].append(IL.IL(model_dim, smax=True, n_iter=3, gamma=.05, beta=beta, type=0, alpha=alpha[l]))
 
-            # IL-MQ
+            # SeqIL-MQ
             elif model_type == 3:
                 models[-1].append(IL.IL(model_dim, smax=True, n_iter=3, gamma=.05,  beta=beta, type=1, alpha=alpha[l]))
 
-            # IL-Adam
+            # SeqIL-Adam
             elif model_type == 4:
                 models[-1].append(IL.IL(model_dim, smax=True, n_iter=3, gamma=.05, beta=beta, type=2, alpha=alpha[l]))
 

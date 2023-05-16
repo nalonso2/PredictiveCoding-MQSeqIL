@@ -148,15 +148,15 @@ def training_run(epochs=100, batch_size=64, data=0, num_seeds=1, alpha=[.015], m
             elif model_type == 1:
                 models[-1].append(BP.BP(model_dim, type=0, alpha=alpha[l], smax=False))
 
-            #IL
+            #SeqIL
             elif model_type == 2:
                 models[-1].append(IL.IL(model_dim, smax=False, n_iter=6, gamma=gamma, beta=beta, type=0, alpha=alpha[l]))
 
-            #IL-MQ
+            #SeqIL-MQ
             elif model_type == 3:
                 models[-1].append(IL.IL(model_dim, smax=False, n_iter=6, gamma=gamma, beta=beta, type=1, alpha=alpha[l]))
 
-            #IL-Adam
+            #SeqIL-Adam
             elif model_type == 4:
                 models[-1].append(IL.IL(model_dim, smax=False, n_iter=6, gamma=gamma, beta=beta, type=2, alpha=alpha[l]))
 
